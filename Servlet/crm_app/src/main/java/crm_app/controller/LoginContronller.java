@@ -13,8 +13,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-//
-
 import config.MySQLConfig;
 import entity.Users;
 
@@ -46,6 +44,7 @@ public class LoginContronller extends HttpServlet {
 		try {
 			// Truyền câu truy vấn vào connection mới vừa kết nối
 			PreparedStatement preparedStatement = connection.prepareStatement(query);
+			
 			// Set tham số cho dấu chấm hỏi bên trong câu query
 			preparedStatement.setString(1, email);
 			preparedStatement.setString(2, password);
@@ -80,6 +79,6 @@ public class LoginContronller extends HttpServlet {
 
 		req.getRequestDispatcher("login.jsp").forward(req, resp);
 		
-		// buổi 23 - 2:09:06
+		
 	}
 }
