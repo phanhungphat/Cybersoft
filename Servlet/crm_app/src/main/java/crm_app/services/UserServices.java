@@ -15,4 +15,8 @@ public class UserServices {
 	public List<Users> getAllUser() {
 		return userRepository.findAll();
 	}
+	
+	public boolean deleteUser(int id) {
+		return userRepository.deleteById(id) > 0;
+	}
 }
