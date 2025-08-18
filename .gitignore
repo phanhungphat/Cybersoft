@@ -36,6 +36,9 @@ nb-configuration.xml
 # Mac
 .DS_Store
 
+#Windows
+desktop.ini
+
 # Maven
 log/
 target/
