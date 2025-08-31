@@ -32,6 +32,7 @@ nb-configuration.xml
 .idea/
 *.iml
 *.iws
+*.smarttomcat
 
 # Mac
 .DS_Store
