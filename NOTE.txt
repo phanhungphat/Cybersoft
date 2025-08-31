@@ -1,4 +1,19 @@
+** LÀM BACKEND THÌ PHẢI ĐẶT CÂU HỎI TẠI SAO TRƯỚC, SAU ĐÓ SẼ SO SÁNH ƯU NHƯỢC ĐIỂM
+
 PHÂN TÍCH CSDL
+Mẹo: CSDL là nơi lưu trữ csdl --> DỮ LIỆU LƯU TRỮ SẼ ĐÁP ỨNG MỘT TÍNH NĂNG BẤT KỲ TRÊN TỪNG GIAO DIỆN
+==> CÁCH PHÂN TÍCH DỄ NHẤT SẼ LÀ "ĐI TÌM ĐỐI TƯỢNG" trên từng màn hình
+==> SAU KHI CÓ ĐỐI TƯỢNG XONG XÁC ĐỊNH THUỘC TÍNH
+--> Khoá chính sẽ là trường nào (thông thường là 'ID')
+--> dùng draw.io vẽ phác thảo ra các bảng trong csdl
+Ví Dụ 1:
+TÍNH NĂNG LOGIN
+- Màn hình Login ==> tính năng login
+==> đối tượng "sử dụng": 'người dùng' a.k.a 'user'
+==> xác định "thuộc tính" của 'đối tượng' --> màn hình login thì có 2 trường 'email' và 'password'
+==> Sau khi xác định được thuộc tính thì "hình dung business sẽ xử lý trên màn hình đó" và bảng đối tượng xuất hiện trong csdl sẽ được xử lý như thế nào ==> một business sẽ gắn liền với một câu truy vấn hoặc nhiều câu truy vấn.
+==> xử lý "bad case" và "happy case" ==> "tồn tại" hay "không tồn tại" các trường mà business sẽ phải xử lý trên màn hình đó ==> hình dung câu truy vấn tới csdl.
+
 
 
 
