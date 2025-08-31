@@ -6,6 +6,11 @@ Mẹo: CSDL là nơi lưu trữ csdl --> DỮ LIỆU LƯU TRỮ SẼ ĐÁP ỨNG
 ==> SAU KHI CÓ ĐỐI TƯỢNG XONG XÁC ĐỊNH THUỘC TÍNH
 --> Khoá chính sẽ là trường nào (thông thường là 'ID')
 --> dùng draw.io vẽ phác thảo ra các bảng trong csdl
+--> bảng nào có quan hệ với nhiều bảng thì chắc chắn bảng đó là bảng trung gian.
+--> Bảng nào cũng phải có "trạng thái" (chưa bắt đầu, đang thực hiện, hoàn thành, huỷ)
+-> ví dụ "trạng thái dự án" và "trạng thái công việc" khác nhau <-- "task công việc" xong nhưng chưa chắc "dự án" sẽ xong.
+--> Nếu có hẳn 1 trang thống kê --> làm thêm 1 "bảng status" nữa --> trong các bảng khác sẽ có id_status làm khoá ngoại --> khi làm thống kê thì lấy dữ liệu của bảng status liên kết với các bảng khác VÀ STATUS THÌ ĐÔI KHI KHÔNG PHẢI LÚC NÀO CŨNG LÀM ĐỘNG.
+--> DATABASE trong thực tế khi tạo sẽ có thêm từ 2 tới 3 cột (trong đó có 2 cột sẽ thêm) --> cột "audit" để "ghi log" - activity log a.k.a secure log; data log, access log --> có thể tương quan ra là "ngày tạo - create date" và "ngày update - update date" và "người tạo"; một số công ty khác kỹ hơn sẽ có thêm cột "dữ liệu mới", "dữ liệu cũ".
 Ví Dụ 1:
 TÍNH NĂNG LOGIN
 - Màn hình Login ==> tính năng login
@@ -13,14 +18,20 @@ TÍNH NĂNG LOGIN
 ==> xác định "thuộc tính" của 'đối tượng' --> màn hình login thì có 2 trường 'email' và 'password'
 ==> Sau khi xác định được thuộc tính thì "hình dung business sẽ xử lý trên màn hình đó" và bảng đối tượng xuất hiện trong csdl sẽ được xử lý như thế nào ==> một business sẽ gắn liền với một câu truy vấn hoặc nhiều câu truy vấn.
 ==> xử lý "bad case" và "happy case" ==> "tồn tại" hay "không tồn tại" các trường mà business sẽ phải xử lý trên màn hình đó ==> hình dung câu truy vấn tới csdl.
+** KHI PHÂN TÍCH GẶP 1 SELECT BOX HAY CHECK BOX THÌ TÁCH RA THÀNH 1 BẢNG
+--> VÌ THÔNG TIN ĐÓ LÀ THÔNG TIN XỬ LÝ ĐỘNG
+-> NỘI DUNG ĐỀ MỤC SELECT BOX HAY CHECK BOX LÀ MỘT ĐỐI TƯỢNG
+** NẾU TRONG CÙNG 1 MÀN HÌNH MÀ TÌM THẤY ĐƯỢC NHIỀU HƠN 2 HOẶC NHIỀU HƠN NỮA THÌ CÁC BẢNG ĐÓ SẼ CÓ QUAN HỆ VỚI NHAU.
+Ví dụ: 1 User chỉ có 1 Role, nhưng 1 Role thì sẽ có nhiều khoá ngoại, bên nào nhiều thì bên đó giữ khoá ngoại.
+- Nguyên tắc phân tích csdl: càng ít bảng càng tốt.
 
 
 
 
 DESIGN PATTERN
-controller: dùng để định nghĩa đường dẫn
-repository: thực thi câu truy vấn và trả kết quả, ko được phép xử lý logic code
-service: xử lý logic code cho controller
+- controller: dùng để định nghĩa đường dẫn
+- repository: thực thi câu truy vấn và trả kết quả, ko được phép xử lý logic code
+- service: xử lý logic code cho controller
 
 =================================================================================
 Cookie: lưu trên máy người dùng
