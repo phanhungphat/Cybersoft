@@ -1,0 +1,38 @@
+PHÂN TÍCH CSDL
+
+
+
+DESIGN PATTERN
+controller: dùng để định nghĩa đường dẫn
+repository: thực thi câu truy vấn và trả kết quả, ko được phép xử lý logic code
+service: xử lý logic code cho controller
+
+=================================================================================
+Cookie: lưu trên máy người dùng
+Session: Lưu trên RAM của Server
+
+
+
+DESIGN PATTER
+- Code tính năng phải chia logic ra, chia làm các phần khác nhau để quản lý
+- Design Pattern là chia nhỏ file và chia nhỏ source code
+- Không có quy định design pattern cụ thể lúc làm thực tế
+
+
++ Xài Stategy Design Pattern
+-- Controller <=> Service <=> Repository
+--> Controller: Chỉ khai báo đường dẫn mà nó sẽ xử lý và nhận tham số người dùng truyền lên
+--> Service: Dùng để xử lý logic code cho các chức năng của Controller (Tức là nhận tham số của controller và đem đi xử lý)
+--> Repository: Thực thi câu truy vấn và trả ra kết quả của câu truy vấn (Lưu ý: không xử lý logic code ở đây)
+
+
+
+
+Thao tác "Create"
+--> Phân tích theo hành vi người dùng
+--> Happy Case
+- định nghĩa đường dẫn servlet
+- xác định câu truy vấn
+- quy định tham số client nhập vào
+- thực hiện câu truy vấn
+

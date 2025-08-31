@@ -1,0 +1,12 @@
+# noi luu tru thong tin cau hinh cua tat ca ung dung ma minh su dung trong docker
+# hoac trong project
+
+services:
+# ten service ( dat gi cung duoc )
+  mysql:
+    image: mysql:latest # ten images va version su dung
+    container_name: mysql10 # ten cua ung dung khi duoc chay len
+    environment: # bien moi truong su dung trong ung dung (moi ung dung moi khac)
+      - MYSQL_ROOT_PASSWORD=abc@123
+    ports:
+      - 3307:3306
