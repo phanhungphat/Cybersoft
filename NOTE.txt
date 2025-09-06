@@ -62,3 +62,7 @@ Thao tác "Create"
 - quy định tham số client nhập vào
 - thực hiện câu truy vấn
 
+SPRINGBOOT - INTRODUCTION - BUỔI 30
+1. PHÂN BIỆT "FRAMEWORK" VÀ "LIBRARY"
+- FRAMEWORK: 
+- LIBRARY: 
