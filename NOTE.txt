@@ -64,5 +64,19 @@ Thao tác "Create"
 
 SPRINGBOOT - INTRODUCTION - BUỔI 30
 1. PHÂN BIỆT "FRAMEWORK" VÀ "LIBRARY"
-- FRAMEWORK: 
-- LIBRARY: 
+- FRAMEWORK: là tập hợp nhiều thư viện, xây dựng sẵn nhiều tính năng có sẵn, khi cần là lấy ra xài, SpringBoot khắc phục điểm yếu, không ép dev tuân thủ nguyên tắc; hỗ trợ nhiều tiêu chuẩn bảo mật
+- LIBRARY: chỉ là "thư viện" - chỉ giải quyết 1 vài tính năng hay xài, 1 vấn đề nhỏ, muốn sử dụng thì phải tự import/insert 
+
+Kiến trúc của Framework Spring luôn có:
+- Client --> Security --> Controller Layer (Nơi định nghĩa đường dẫn) --> Business Layer (tương ứng với lại tầng Service)--> Persistence Layer (Tương ứng với Repository)--> Database 
+
+- tại sao sử dụng microservice ?
+--> Để cho các tính năng đều chạy độc lập với nhau.
+--> 1 Service chết thì các tính năng khác vẫn còn chạy được
+
+SpringBoot giúp xây dựng trang web
+- Tại sao lại chia FE và BE:
+--> FE xử lý giao diện
+--> BE xử lý database, bảo mật, làm trung gian để tương tác với database, tránh bị hack --> cái nặng của BE là xử lý dữ liệu <---- BE nặng về nghiệp vụ ---> Xử lý dữ liệu được quy định mà hầu như các ngôn ngữ đều hỗ trợ --> Kiểu dữ liệu nguyên thuỷ --> Vì kiểu dữ liệu nguyên thuỷ là kiểu dữ liệu sơ khai --> Kiểu String
+
+0:37:20

@@ -1,0 +1,8 @@
+INDEX VERSION 1.4+D:\Cybersoft\Cybersoft\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+2766385542.index
+3950883447.index
+880201399.index
+2541763648.index
+2543818662.index
+1610401415.index
+960367701.index
