@@ -79,4 +79,7 @@ SpringBoot giúp xây dựng trang web
 --> FE xử lý giao diện
 --> BE xử lý database, bảo mật, làm trung gian để tương tác với database, tránh bị hack --> cái nặng của BE là xử lý dữ liệu <---- BE nặng về nghiệp vụ ---> Xử lý dữ liệu được quy định mà hầu như các ngôn ngữ đều hỗ trợ --> Kiểu dữ liệu nguyên thuỷ --> Vì kiểu dữ liệu nguyên thuỷ là kiểu dữ liệu sơ khai --> Kiểu String
 
-0:37:20
+Học SpringBoot:
+--> Định nghĩa đường dẫn
+--> Xử lý logic đường dẫn
+--> Trả ra dữ liệu
