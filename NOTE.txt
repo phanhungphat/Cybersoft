@@ -83,3 +83,9 @@ Học SpringBoot:
 --> Định nghĩa đường dẫn
 --> Xử lý logic đường dẫn
 --> Trả ra dữ liệu
+
+- 2 Loại thư viện: Gradle và Maven
+--> Gradle nhanh hơn
+--> Nhưng xài thì xài Maven --> vì nó không cache nhiều, nặng máy
+
+0:50:47
