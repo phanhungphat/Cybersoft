@@ -88,4 +88,36 @@ SpringBoot giúp xây dựng trang web
 --> Gradle nhanh hơn
 --> Nhưng xài thì xài Maven --> vì nó không cache nhiều, nặng máy
 
-0:50:47
+- Các hỗ trợ packaging: JAR và WAR --> Chọn JAR
+--> hồi xưa nếu chọn Java App thì JAR, nếu chọn Java Web thì WAR
+--> chọn Jar vì tính phổ biến
+
+Vào web "Spring initializr" --> chọn kiểu project là "Maven", Packaging là "JAR", Java với Version ỔN ĐỊNH và MỚi NHẤT (tại thời điểm ghi chú là 21); Sau đó add Dependencies chỉ chọn "Spring Web" --> Sau đó bấm Generate.
+
+MỤC ĐÍCH CHUNG CỦA BE
+--> ĐỊNH NGHĨA ĐƯỜNG DẪN --> Tạo controller
+--> ĐỊNH NGHĨA THAM SỐ đường dẫn
+
+ * Định Nghĩa đường dẫn SpringBoot, xài 2 annotation để khai báo cho SpringBoot biết là đây là định nghĩa đường dẫn
+ *
+ * Dùng để khai báo cho SpringBoot biết đây là nơi khai báo đường dẫn
+ * @Controller: Khai báo cho Spring biết đây là nơi khai báo đường dẫn, trả về file html (Giao diện người dùng)
+ * @ResponseBody: Khai báo cho Spring biết đây là nơi khai báo đường dẫn, trả về dữ liệu (JSON, XML, String, ...)
+ *
+ * @RestController: Khai báo cho Spring biết đây là nơi khai báo đường dẫn, trả về dữ liệu (JSON, XML, String, ...) --> Hiên tại thường hay xài JSON
+ *
+ * @RequestMapping: Khai báo đường dẫn
+ 
+ CÁC THƯ MỤC QUAN TRỌNG TRONG 1 DỰ ÁN SPRINGBOOT
+ - <tên thư mục gốc>/src/ : không được xoá
+ - <tên thư mục gốc>/src/main : chứa logic code
+ - <tên thư mục gốc>/src/main/java : định nghĩa đường dẫn, logic code
+ - <tên thư mục gốc>/src/main/resources : nơi chứa các file html,css
+ - <tên thư mục gốc>/src/main/resources/static/ : chứa file tĩnh --> dev ít xài
+ - <tên thư mục gốc>/src/main/resources/static/templates/ : vẫn chứa html --> dev ít xài
+ - <tên thư mục gốc>/src/main/resources/application.properties : file quan trọng, không được xoá, chứa thông tin cấu hình của project
+ 
+ - <tên thư mục gốc>/src/test : nơi viết các unit test
+ 
+ - pom.xml : thông tin metadata của project, có thể insert thêm thư viện ở cặp thẻ <dependency>; muốn add thêm thư viện mới thì vào trang web String Initializr, search thêm thư viện, sau đó bấm "explore" và kiếm cặp thẻ tương ứng với thư viện cần thêm, copy xong add vào file pom.xml
+ 
