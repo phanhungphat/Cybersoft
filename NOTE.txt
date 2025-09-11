@@ -121,3 +121,15 @@ MỤC ĐÍCH CHUNG CỦA BE
  
  - pom.xml : thông tin metadata của project, có thể insert thêm thư viện ở cặp thẻ <dependency>; muốn add thêm thư viện mới thì vào trang web String Initializr, search thêm thư viện, sau đó bấm "explore" và kiếm cặp thẻ tương ứng với thư viện cần thêm, copy xong add vào file pom.xml
  
+Bean và IOC
+- Dependencies Injection là gì ?
+--> "Khử sự phụ thuộc" --> Để khử sự phục thuộc thì sẽ xài tới tính đa hình
+-> Có thể hiểu là khai báo để dùng xuyên class
+--> Tạo ra những đối tượng gán sẵn giá trị, rồi sau đó có thể dùng xuyên class
+--> Có thể hiểu giống như biến static --> Lưu trên RAM
+
+Dependencies Injection là kỹ thuật là lưu trữ các đối tượng, biến đã khai báo sẵn giá trị để dùng chung, khi cần thì gọi ra sử dụng
+--> Khi muốn sử dụng thì "inject" xuống
+--> Trong SpringBoot thì sử dụng IOC
+
+0:30:13
