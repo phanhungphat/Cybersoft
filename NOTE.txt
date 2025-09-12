@@ -123,6 +123,7 @@ MỤC ĐÍCH CHUNG CỦA BE
  
 Bean và IOC
 - Dependencies Injection là gì ?
+--> NƠI LƯU TRỮ NHỮNG ĐỐI TƯỢNG ĐÃ ĐƯỢC KHAI BÁO SẴN GIÁ TRỊ, KHI CẦN THÌ LẤY XUỐNG SỬ DỤNG, KHÔNG KHỞI TẠO LẠI
 --> "Khử sự phụ thuộc" --> Để khử sự phục thuộc thì sẽ xài tới tính đa hình
 -> Có thể hiểu là khai báo để dùng xuyên class
 --> Tạo ra những đối tượng gán sẵn giá trị, rồi sau đó có thể dùng xuyên class
@@ -132,4 +133,20 @@ Dependencies Injection là kỹ thuật là lưu trữ các đối tượng, bi�
 --> Khi muốn sử dụng thì "inject" xuống
 --> Trong SpringBoot thì sử dụng IOC
 
-0:30:13
+0:30:13 - buổi 31
+
+--> Quy định tham số và nhận tham số
+
+
+RESTFUL API
+- Bộ phương thức/nguyên tắc GET, POST, PUT, DELETE dev bên ngoài rất ít tuân thủ, toàn dùng phương thức POST
+- Http Status bên ngoài gặp nhiều nhất là lỗi 500 (lỗi logic hoặc được gọi là lỗi runtime/compiler)
+- RESTful API kế thừa toàn bộ REST API và có thêm các nguyên tắc về HTTP Status code, các phương thức GET, POST, PUT
+
+- Kiểu JSON
+--> JSON ARRAY []: Một mảng kiểu dữ liệu mong muốn
+--> JSON OBJECT {}: Một đối tượng
+
+- Có 2 cách truyền tham số
+--> Tham số truyền trên URL (Query Param)
+--> 
