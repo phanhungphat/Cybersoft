@@ -148,5 +148,5 @@ RESTFUL API
 --> JSON OBJECT {}: Một đối tượng
 
 - Có 2 cách truyền tham số
---> Tham số truyền trên URL (Query Param)
---> 
+--> Tham số truyền trên URL (Query Param): tham số truyền trực tiếp trên URL" ?key=value&key=value --> Nếu tuân thủ nguyên tắc thì chỉ sủ dụng phương thức GET
+--> Truyền ngầm: POST, PUT, DELETE
