@@ -38,8 +38,11 @@ CREATE TABLE baiviet(
 
 --! Tạo bảng không nhất thiết phải có khoá chính (PK)
 --! Khoá chính (Primary Key)
--- Khi chỉ định một cột làm khoá chính thì dữ liệu được thêm vào cột đó phải là duy nhất
--- Khoá chính có đánh index - Khái niệm quan trọng --> PHẢI BIẾT
+-- Khi chỉ định một cột làm khoá chính thì dữ liệu được thêm vào cột đó phải là duy nhất --> Cột được chỉ định làm khoá chính thì giá trị trên mỗi dòng của cột đó phải là duy nhất
+--! Cột khoá chính phải được định nghĩa bằng ràng buộc NOT NULL
+--! Khoá chính có đánh index - Khái niệm quan trọng --> PHẢI BIẾT
+-- đánh index hỗ trợ ràng buộc khoá chính hoặc ràng buộc duy nhất
+-- Mỗi khi INSERT hay UPDATE, hệ thống phải kiểm tra xem giá trị khoá chính có tốn tại chưa, nếu chưa thì phải quét toàn bộ bảng --> Không tối ưu tốc độ truy vấn
 -- Có thể có 1 hoặc nhiều cột làm khoá chính
 --! Trong một database chỉ có một khoá chính
 --! Nhưng có thể sẽ có NHIỀU CỘT đóng vai trò là MỘT khoá chính
@@ -48,6 +51,11 @@ CREATE TABLE baiviet(
 -- Bên ngoài thực tế thì dev sẽ sử dụng kiểu chuỗi - kiểu varchar (dưới dạng UUID) - để đảm bảo vấn đề bảo mật, tránh sql injection
 -- đối với Oracle thì phải tạo Sequence
 --! KHI TẠO MỘT BẢNG NÊN CÓ KHOÁ CHÍNH, NHƯNG KHÔNG CÓ KHOÁ CHÍNH VẪN ĐƯỢC (dễ bị nhầm lẫn lúc interview)
+
+--! Khoá chính (PK) và khoá ngoại (FK) luôn luôn được ràng buộc là NOT NULL
+-- Một bảng chỉ có thể có duy nhất một ràng buộc khoá chính, nhưng có thể có nhiều ràng buộc duy nhất
+-- Các cột tham gia vào ràng buộc duy nhất không nhất thiết phải có ràng buộc NOT NULL
+
 
 
 --! Xoá bảng
