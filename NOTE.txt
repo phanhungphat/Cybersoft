@@ -152,5 +152,9 @@ RESTFUL API
 --> Truyền ngầm: POST, PUT, DELETE
 
 
+BUỔI 33 - JPA
+- DB First hay Code First ?
+---> Xài "DB First"
+--> Code First được thực hiện khi sử dụng chung thư viện ORM (vì không cần biết tới truy vấn)
 
---> Done day 13,14,15,19
+- DB First thì chỉ có 2 quan hệ là 1-n và n-1
