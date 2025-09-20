@@ -39,7 +39,7 @@ Session: Lưu trên RAM của Server
 
 
 
-DESIGN PATTER
+DESIGN PATTERN
 - Code tính năng phải chia logic ra, chia làm các phần khác nhau để quản lý
 - Design Pattern là chia nhỏ file và chia nhỏ source code
 - Không có quy định design pattern cụ thể lúc làm thực tế
